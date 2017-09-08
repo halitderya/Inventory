@@ -1,0 +1,545 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A1B7D65-9CA9-43CD-95E1-DFE83A95A790}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>Envanter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\halit.derya\Desktop\envanterapp\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1466819145_barcode.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>CC52A49D65F741259A89101297327BB42771AE30</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>envanter_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gma.QrCodeNet.Encoding">
+      <HintPath>..\packages\QrCodeNet.0.3\lib\Gma.QrCodeNet.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode">
+      <HintPath>..\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formlar\arayüz\anasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\arayüz\anasayfa.Designer.cs">
+      <DependentUpon>anasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENVANTERDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ENVANTERDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ENVANTERDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ENVANTERDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ENVANTERDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ENVANTERDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ENVANTERDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ENVANTERDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ENVANTERDataSet4.cs">
+      <DependentUpon>ENVANTERDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ENVANTERDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ENVANTERDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ENVANTERDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ENVANTERDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\asset\seriara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\asset\seriara.Designer.cs">
+      <DependentUpon>seriara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\cesitli\hakkinda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\cesitli\hakkinda.Designer.cs">
+      <DependentUpon>hakkinda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\cesitli\password_reset_self.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\cesitli\password_reset_self.Designer.cs">
+      <DependentUpon>password_reset_self.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\cesitli\password_reset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\cesitli\password_reset.Designer.cs">
+      <DependentUpon>password_reset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\cesitli\yardim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\cesitli\yardim.Designer.cs">
+      <DependentUpon>yardim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\arayüz\anasayfakul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\arayüz\anasayfakul.Designer.cs">
+      <DependentUpon>anasayfakul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Raporlamalar\sahipsiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Raporlamalar\sahipsiz.Designer.cs">
+      <DependentUpon>sahipsiz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Raporlamalar\tumara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Raporlamalar\tumara.Designer.cs">
+      <DependentUpon>tumara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Raporlamalar\gecmisara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Raporlamalar\gecmisara.Designer.cs">
+      <DependentUpon>gecmisara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Raporlamalar\persara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Raporlamalar\persara.Designer.cs">
+      <DependentUpon>persara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\personel\durumekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\personel\durumekle.Designer.cs">
+      <DependentUpon>durumekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENVANTERDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ENVANTERDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\personel\durumara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\personel\durumara.Designer.cs">
+      <DependentUpon>durumara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\personel\durumsil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\personel\durumsil.Designer.cs">
+      <DependentUpon>durumsil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\arayüz\giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\arayüz\giris.Designer.cs">
+      <DependentUpon>giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\arayüz\karsilama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\arayüz\karsilama.Designer.cs">
+      <DependentUpon>karsilama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\asset\kayitguncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\asset\kayitguncelle.Designer.cs">
+      <DependentUpon>kayitguncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\asset\barkodara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\asset\barkodara.Designer.cs">
+      <DependentUpon>barkodara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\yazdirma\qrcode2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\yazdirma\qrcode2.Designer.cs">
+      <DependentUpon>qrcode2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Raporlamalar\departmanara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Raporlamalar\departmanara.Designer.cs">
+      <DependentUpon>departmanara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Raporlamalar\tipara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Raporlamalar\tipara.Designer.cs">
+      <DependentUpon>tipara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Raporlamalar\firmaara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Raporlamalar\firmaara.Designer.cs">
+      <DependentUpon>firmaara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\ilişki\guncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\ilişki\guncelle.Designer.cs">
+      <DependentUpon>guncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sahipliksirket.cs">
+      <DependentUpon>sahipliksirket.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sahipliksirket.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sahipliksirket.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\asset\sil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\asset\sil.Designer.cs">
+      <DependentUpon>sil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\asset\kayıtekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\asset\kayıtekle.Designer.cs">
+      <DependentUpon>kayıtekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formlar\arayüz\anasayfa.resx">
+      <DependentUpon>anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\asset\seriara.resx">
+      <DependentUpon>seriara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\cesitli\hakkinda.resx">
+      <DependentUpon>hakkinda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\cesitli\password_reset_self.resx">
+      <DependentUpon>password_reset_self.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\cesitli\password_reset.resx">
+      <DependentUpon>password_reset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\cesitli\yardim.resx">
+      <DependentUpon>yardim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\arayüz\anasayfakul.resx">
+      <DependentUpon>anasayfakul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Raporlamalar\sahipsiz.resx">
+      <DependentUpon>sahipsiz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Raporlamalar\tumara.resx">
+      <DependentUpon>tumara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Raporlamalar\gecmisara.resx">
+      <DependentUpon>gecmisara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Raporlamalar\persara.resx">
+      <DependentUpon>persara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\personel\durumekle.resx">
+      <DependentUpon>durumekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\personel\durumara.resx">
+      <DependentUpon>durumara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\personel\durumsil.resx">
+      <DependentUpon>durumsil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\arayüz\giris.resx">
+      <DependentUpon>giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\arayüz\karsilama.resx">
+      <DependentUpon>karsilama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\asset\kayitguncelle.resx">
+      <DependentUpon>kayitguncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\asset\barkodara.resx">
+      <DependentUpon>barkodara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\yazdirma\qrcode2.resx">
+      <DependentUpon>qrcode2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Raporlamalar\departmanara.resx">
+      <DependentUpon>departmanara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Raporlamalar\tipara.resx">
+      <DependentUpon>tipara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\ilişki\guncelle.resx">
+      <DependentUpon>guncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\asset\sil.resx">
+      <DependentUpon>sil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\asset\kayıtekle.resx">
+      <DependentUpon>kayıtekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Raporlamalar\firmaara.resx">
+      <DependentUpon>firmaara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ENVANTERDataSet.xsc">
+      <DependentUpon>ENVANTERDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ENVANTERDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ENVANTERDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ENVANTERDataSet.xss">
+      <DependentUpon>ENVANTERDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ENVANTERDataSet1.xsc">
+      <DependentUpon>ENVANTERDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ENVANTERDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ENVANTERDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ENVANTERDataSet1.xss">
+      <DependentUpon>ENVANTERDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ENVANTERDataSet2.xsc">
+      <DependentUpon>ENVANTERDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ENVANTERDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ENVANTERDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ENVANTERDataSet2.xss">
+      <DependentUpon>ENVANTERDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ENVANTERDataSet3.xsc">
+      <DependentUpon>ENVANTERDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ENVANTERDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ENVANTERDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ENVANTERDataSet3.xss">
+      <DependentUpon>ENVANTERDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ENVANTERDataSet4.xsc">
+      <DependentUpon>ENVANTERDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ENVANTERDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ENVANTERDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ENVANTERDataSet4.xss">
+      <DependentUpon>ENVANTERDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ENVANTERDataSet5.xsc">
+      <DependentUpon>ENVANTERDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ENVANTERDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ENVANTERDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ENVANTERDataSet5.xss">
+      <DependentUpon>ENVANTERDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ENVANTERDataSet6.xsc">
+      <DependentUpon>ENVANTERDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="ENVANTERDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ENVANTERDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ENVANTERDataSet6.xss">
+      <DependentUpon>ENVANTERDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="envanter_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="sahipliksirket.xsc">
+      <DependentUpon>sahipliksirket.xsd</DependentUpon>
+    </None>
+    <None Include="sahipliksirket.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sahipliksirket.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sahipliksirket.xss">
+      <DependentUpon>sahipliksirket.xsd</DependentUpon>
+    </None>
+    <None Include="Scripts\jquery-2.1.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1465564915_print.png" />
+    <None Include="Resources\1466102459_lock.png" />
+    <None Include="Resources\1466102473_lock-open.png" />
+    <Content Include="1466819145_barcode.ico" />
+    <Content Include="Resources\203819-200.png" />
+    <None Include="Resources\Image1.png" />
+    <None Include="Resources\Icon1.ico" />
+    <None Include="Resources\logo-polin.png" />
+    <None Include="Resources\inventorycontrol.jpg" />
+    <None Include="Resources\Crystal_Project_Lock.png" />
+    <None Include="Resources\streamfile.jpg" />
+    <None Include="Resources\ebi.png" />
+    <None Include="Resources\logo-pol.jpg" />
+    <None Include="Resources\polin.jpg" />
+    <None Include="Resources\315f247.jpg" />
+    <None Include="Resources\POLIN-LOGO-1-01.png" />
+    <None Include="Resources\ebi_logo.png" />
+    <Content Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\nugetexample.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
