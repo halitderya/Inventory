@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
@@ -69,16 +62,15 @@ namespace WindowsFormsApplication1
                 {
                     if (!(maskedTextBox1.Text == string.Empty))
                     {
+                        
                         String str = ConfigurationManager.ConnectionStrings["connection"].ToString();
-
                         String yetkisorgu = "select * from kullanici where ad ='" + textBox1.Text + "'  and yetki='2'  ";
                         SqlConnection con = new SqlConnection(str);
                         SqlCommand cmd = new SqlCommand("select * from kullanici where ad = '" +textBox1.Text+ "' and sifre ='" + maskedTextBox1.Text + "'", con);
                         SqlCommand cmdyetki = new SqlCommand(yetkisorgu, con);
-
                         SqlDataReader dbr;
                         SqlDataReader yetkidr;
-                       
+                    
                         con.Open();
                         yetkidr = cmdyetki.ExecuteReader();
                         dbr = cmd.ExecuteReader();
@@ -173,7 +165,7 @@ namespace WindowsFormsApplication1
 
 
 
-            Configuration config = ConfigurationManager.OpenExeConfiguration("Envanter.exe");
+                   Configuration config = ConfigurationManager.OpenExeConfiguration("Envanter.exe");
 
                    ConnectionStringsSection section = config.GetSection("connectionStrings") as ConnectionStringsSection;
 
